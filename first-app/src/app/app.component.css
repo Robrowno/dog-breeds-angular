@@ -11,6 +11,7 @@ header {
   padding: var(--content-padding);
 }
 
+/* Styling for the Title and Logo */
 h1 {
   display: inline-flex;
   margin-left: 1.5rem;

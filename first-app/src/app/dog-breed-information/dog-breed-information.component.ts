@@ -10,7 +10,7 @@ import { Dogbreeds } from '../dogbreeds';
   <section class="listing">
     <img class="listing-photo" [src]="dogBreed.image" alt="Exterior photo of a {{dogBreed.name}}">
     <h2 class="listing-heading">{{ dogBreed.name }}</h2>
-    <p class="listing-location">{{ dogBreed.description}}</p>
+    <p class="listing-description">{{ dogBreed.description}}</p>
   </section>
   `,
   styleUrls: ['./dog-breed-information.component.css']

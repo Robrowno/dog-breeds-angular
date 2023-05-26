@@ -1,3 +1,4 @@
+/* Grid Display for main content body */
 .results {
     display: grid;
     column-gap: 14px;
@@ -6,7 +7,7 @@
     margin-top: 50px;
     justify-content: space-around;
   }
-  
+  /* Form/input and button styling */
   input[type="text"] {
     border: solid 1px var(--primary-color);
     padding: 10px;
@@ -23,7 +24,7 @@
     color: white;
     border-radius: 8px;
   }
-  
+  /* Media Queries */
   @media (min-width: 500px) and (max-width: 768px) {
     .results {
         grid-template-columns: repeat(2, 1fr);
