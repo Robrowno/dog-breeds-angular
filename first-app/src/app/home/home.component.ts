@@ -18,8 +18,11 @@ import { Dogbreeds } from '../dogbreeds';
     </form>
   </section>
   <section class="results">
-    <app-dog-breed-information></app-dog-breed-information>
+    <app-dog-breed-information [dogBreed]="dogBreed"></app-dog-breed-information>
   </section>
+
+  <section>
+  <
   `,
   styleUrls: ['./home.component.css']
 })
@@ -28,6 +31,6 @@ export class HomeComponent {
     id: 100,
     name: 'Poodle',
     description: 'The poodle is a group of formal dog breeds, the Standard Poodle, Miniature Poodle and Toy Poodle. The origins of the poodles are still discussed with a dispute over whether the poodle descends from the old French Barbet breed or from Germany as a type of water dog.',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Miniature_Poodle_600.jpg/440px-Miniature_Poodle_600.jpg'
+    image: './assets/dog_images/standard-poodle-dog.webp'
 };
 }
