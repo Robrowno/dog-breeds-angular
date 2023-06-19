@@ -22,7 +22,10 @@ export class DetailsComponent {
   
   constructor() { 
     const dogBreedId = 
-    Number(this.route.snapshot.params['id']);
-    this.breedsService.getDogBreedById(dogBreedId);
+    // Number(this.route.snapshot.params['id']);
+    // this.breedsService.getDogBreedById(dogBreedId);
+    Number(this.route.snapshot.params['id']); 
+    this.dogBreed = this.breedsService.getDogBreedById(dogBreedId);
+    
   }
 }
