@@ -1,0 +1,21 @@
+h2 {
+    text-align: center;
+    padding-bottom: 2%;
+}
+
+.details {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+img.dog-photo {
+    box-shadow: 0px 5px 25px var(--shadow-color);
+    border-radius: 20px;
+    width: 50%;
+    object-fit: cover;
+
+}
+
+p.dog-information {
+    padding: 0 20%;
+}

@@ -10,8 +10,15 @@ import { Dogbreeds } from '../dogbreeds';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <h2>Details</h2>
-    {{dogBreed?.id}}
+  <h2>Details</h2>
+<article class="details">
+  <img class="dog-photo" [src]="dogBreed?.image" alt="Photo of a {{dogBreed?.name}}">
+  <section class="dog-description">
+    <h2 class="listing-heading">{{ dogBreed?.name }}</h2>
+    <p class="dog-information">{{ dogBreed?.extendedDescription }}</p>
+  </section>
+</article>
+
 `,
   styleUrls: ['./details.component.css']
 })
@@ -22,10 +29,8 @@ export class DetailsComponent {
   
   constructor() { 
     const dogBreedId = 
-    // Number(this.route.snapshot.params['id']);
-    // this.breedsService.getDogBreedById(dogBreedId);
     Number(this.route.snapshot.params['id']); 
     this.dogBreed = this.breedsService.getDogBreedById(dogBreedId);
-    
+
   }
 }

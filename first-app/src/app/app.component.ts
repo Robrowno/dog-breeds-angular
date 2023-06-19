@@ -12,10 +12,12 @@ import { RouterModule } from '@angular/router';
   ],
   template: `
   <main>
+    <a [routerLink]="['/']">
     <header class="brand-name">
       <img class="paw-logo" src="/assets/paw-print.svg" alt="logo" aria-hidden="true">
       <h1>{{ title }}</h1>
     </header>
+    </a>
     <section class="content">
     <router-outlet></router-outlet>
     </section>
