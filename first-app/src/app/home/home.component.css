@@ -24,6 +24,13 @@
     color: white;
     border-radius: 8px;
   }
+
+  button:hover {
+    background: var(--secondary-color);
+    border: solid 1px var(--secondary-color);
+    cursor: pointer;
+  }
+
   /* Media Queries */
   @media (min-width: 500px) and (max-width: 768px) {
     .results {

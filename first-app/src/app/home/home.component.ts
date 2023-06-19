@@ -14,28 +14,39 @@ import { BreedsService } from '../breeds.service';
   template: `
   <section>
     <form>
-      <input type="text" placeholder="Filter by dog breed">
-      <button class="primary" type="button">Search</button>
+      <input type="text" placeholder="Filter by dog breed" #filter>
+      <button class="primary" type="button" (click)="filterResults(filter.value)" >Search</button>
     </form>
   </section>
   <section class="results">
     <app-dog-breed-information
-      *ngFor="let dogBreed of dogBreedList"
+      *ngFor="let dogBreed of filterDogBreedsList"
     [dogBreed]="dogBreed">
     </app-dog-breed-information>
   </section>
 
   <section>
-  <
   `,
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
   dogBreedList: Dogbreeds[] = [];
+  filterDogBreedsList: Dogbreeds[] = [];
   breedsService: BreedsService = inject(BreedsService);
 
   constructor() {
     this.dogBreedList = this.breedsService.getAllDogBreeds();
-
+    this.filterDogBreedsList = this.dogBreedList;
+  
 }
+
+  filterResults(text: string) {
+    if (!text) {
+      this.filterDogBreedsList = this.dogBreedList;
+    }
+    this.filterDogBreedsList = this.dogBreedList.filter((dogBreed) => {
+      return dogBreed.name.toLowerCase().includes(text.toLowerCase());
+    });
+
+  } 
 }
