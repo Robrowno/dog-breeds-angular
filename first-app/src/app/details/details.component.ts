@@ -29,8 +29,10 @@ export class DetailsComponent {
   
   constructor() { 
     const dogBreedId = 
-    Number(this.route.snapshot.params['id']); 
-    this.dogBreed = this.breedsService.getDogBreedById(dogBreedId);
+    parseInt(this.route.snapshot.paramMap.get('id') || '', 11);
+    this.breedsService.getDogBreedById(dogBreedId).then((dogBreed) => {
+      this.dogBreed = dogBreed;
+    });
 
   }
 }

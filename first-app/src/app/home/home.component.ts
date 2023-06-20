@@ -35,8 +35,10 @@ export class HomeComponent {
   breedsService: BreedsService = inject(BreedsService);
 
   constructor() {
-    this.dogBreedList = this.breedsService.getAllDogBreeds();
-    this.filterDogBreedsList = this.dogBreedList;
+    this.breedsService.getAllDogBreeds().then((dogBreedList: Dogbreeds[]) => {
+      this.dogBreedList = dogBreedList;
+      this.filterDogBreedsList = dogBreedList;
+    });
   
 }
 
