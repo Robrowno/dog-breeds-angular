@@ -1,3 +1,4 @@
+
 /* Base css styling */
 * {
   margin: 0;
@@ -9,10 +10,28 @@ body {
 }
 /* Custom colours */
 :root {
-  --primary-color: #FB5857;
-  --secondary-color: #8B89E6;
+  --primary-color: #fb5857;
+  --secondary-color: #8b89e6;
   --accent-color: #fac4c4;
   --shadow-color: #97dbf5;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: var(--primary-color);
+  color: white;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--secondary-color);
 }
 
 button.primary {
