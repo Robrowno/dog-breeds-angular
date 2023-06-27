@@ -15,6 +15,10 @@ I have included some basic filtering functionality thanks to some help from the 
 
 ![Filtering functionality](./first-app/src/assets/readme_images/filtering.png)
 
+I have begun working on the community page which will have a sign-up form for newsletters/emails etc - not functional yet, just static:
+
+![Community Page](./first-app/src/assets/readme_images/community-page-v1.0.png)
+
 
 ##  Early version of the site:
 
